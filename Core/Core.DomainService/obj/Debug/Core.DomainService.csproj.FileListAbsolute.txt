@@ -1,0 +1,10 @@
+H:\Project\Qoniac\Qoniac\Core\Core.DomainService\bin\Debug\Core.DomainService.dll
+H:\Project\Qoniac\Qoniac\Core\Core.DomainService\bin\Debug\Core.DomainService.pdb
+H:\Project\Qoniac\Qoniac\Core\Core.DomainService\obj\Debug\Core.DomainService.dll
+H:\Project\Qoniac\Qoniac\Core\Core.DomainService\obj\Debug\Core.DomainService.pdb
+H:\Project\Qoniac\Qoniac\Core\Core.DomainService\obj\Debug\Core.DomainService.csprojAssemblyReference.cache
+H:\Project\Qoniac\ForGit\Client-Server\Core\Core.DomainService\bin\Debug\Core.DomainService.dll
+H:\Project\Qoniac\ForGit\Client-Server\Core\Core.DomainService\bin\Debug\Core.DomainService.pdb
+H:\Project\Qoniac\ForGit\Client-Server\Core\Core.DomainService\obj\Debug\Core.DomainService.csprojAssemblyReference.cache
+H:\Project\Qoniac\ForGit\Client-Server\Core\Core.DomainService\obj\Debug\Core.DomainService.dll
+H:\Project\Qoniac\ForGit\Client-Server\Core\Core.DomainService\obj\Debug\Core.DomainService.pdb

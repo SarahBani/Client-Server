@@ -1,0 +1,11 @@
+H:\Project\Qoniac\Qoniac\QoniacService\bin\QoniacService.dll.config
+H:\Project\Qoniac\Qoniac\QoniacService\bin\QoniacService.dll
+H:\Project\Qoniac\Qoniac\QoniacService\bin\QoniacService.pdb
+H:\Project\Qoniac\Qoniac\QoniacService\bin\Core.DomainModel.dll
+H:\Project\Qoniac\Qoniac\QoniacService\bin\Core.DomainService.dll
+H:\Project\Qoniac\Qoniac\QoniacService\bin\Core.DomainModel.pdb
+H:\Project\Qoniac\Qoniac\QoniacService\bin\Core.DomainService.pdb
+H:\Project\Qoniac\Qoniac\QoniacService\obj\Debug\QoniacService.csprojAssemblyReference.cache
+H:\Project\Qoniac\Qoniac\QoniacService\obj\Debug\QoniacService.csproj.CopyComplete
+H:\Project\Qoniac\Qoniac\QoniacService\obj\Debug\QoniacService.dll
+H:\Project\Qoniac\Qoniac\QoniacService\obj\Debug\QoniacService.pdb

@@ -1,0 +1,89 @@
+﻿<Window x:Class="UserInterface.WPFClient.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Number Convertor" Height="450" Width="800" WindowStartupLocation="CenterScreen" 
+        FontFamily="Times New Roman" FontSize="25" FocusManager.FocusedElement="{Binding ElementName=InputTextBox}">
+
+    <Window.Resources>
+        <VisualBrush x:Key="MyVisualBrush" TileMode="Tile" Viewport="0,0,12,12" ViewportUnits="Absolute" Viewbox="0,0,12,12" ViewboxUnits="Absolute">
+            <VisualBrush.Visual>
+                <Grid Background="#000">
+                    <Path Data="M 0 12 L 12 0" Stroke="#2A3F3D" />
+                    <Path Data="M 0 0 L 12 12" Stroke="#2A3F3D" />
+                </Grid>
+            </VisualBrush.Visual>
+        </VisualBrush>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource MyVisualBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition MaxHeight="150"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="0, 0, 10, 0" VerticalAlignment="Center" HorizontalAlignment="Right" FontWeight="ExtraBold" Foreground="#FFF">
+            Enter Price :
+        </TextBlock>
+
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="InputTextBox" Style="{StaticResource InputTextBlock}"       
+                 Text="{Binding Path=NumberConvertorModel.Input, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}" />
+
+        <Button Grid.Row="0" Grid.Column="2" Content="OK" Margin="10, 0, 0, 0" IsDefault="True"
+                Style="{StaticResource ButtonStyle}" Command="{Binding Path=ChangeInputCommand}"/>
+
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" BorderThickness="2" MinHeight="150" Margin="100, 0, 100, 50"
+                HorizontalAlignment="Stretch" VerticalAlignment="Top" Background="#000" CornerRadius="3">
+            
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="BorderBrush" Value="#16FFE7"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=NumberConvertorModel.HasError, Mode=OneWay}" Value="True">
+                            <Setter Property="BorderBrush" Value="Red" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+
+            <TextBlock HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center" 
+                       FontWeight="Normal" Text="{Binding Path=NumberConvertorModel.Output, Mode=OneWay}" >
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Foreground" Value="#16FFE7"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Path=NumberConvertorModel.HasError}" Value="True">
+                                <Setter Property="Foreground" Value="Red" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+        </Border>
+
+        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" MinHeight="150" Margin="100, 0, 100, 50" 
+                Background="{StaticResource MyVisualBrush}">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Setter Property="Visibility" Value="Hidden"/>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Path=NumberConvertorModel.IsBusy}" Value="True">
+                            <Setter Property="Visibility" Value="Visible" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <Label Foreground="#16FFE7" VerticalAlignment="Center" HorizontalAlignment="Center" >Please wait...</Label>
+        </Border>
+
+    </Grid>
+</Window>
